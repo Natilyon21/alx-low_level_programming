@@ -13,10 +13,10 @@ int main(void)
 	int d;
 
 	c = 'a';
-
+	d=0;
 	while
 		(d < 10) {
-			puutchar(d + '0');
+			putchar(d + '0');
 			d++;
 		}
 	while
