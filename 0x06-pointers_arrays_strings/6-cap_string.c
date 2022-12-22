@@ -1,32 +1,35 @@
 #include "main.h"
+
 /**
- * cap_string - capitalizes all words of a string.
- * @s: string
- * Return: capitalized string
+ * cap_string - Capitalises all words of a string
+ * @s: String being evaluated
+ *
+ * Return: Capitalised string
  */
 char *cap_string(char *s)
 {
-	int i = 0;
+	int i;
+	int start = 1;
 
-	while (s[++i])
+	for (i = 0; s[i]; i++)
 	{
-		while (!(s[i] >= 'a' && s[i] <= 'z'))
-			i++;
-
-		if (s[i - 1] == ' ' ||
-				s[i - 1] == '\t' ||
-				s[i - 1] == '\n' ||
-				s[i - 1] == ',' ||
-				s[i - 1] == ';' ||
-				s[i - 1] == '.' ||
-				s[i - 1] == '!' ||
-				s[i - 1] == '?' ||
-				s[i - 1] == '"' ||
-				s[i - 1] == '(' ||
-				s[i - 1] == ')' ||
-				s[i - 1] == '{' ||
-				s[i - 1] == '}')
-			s[i] -= 32;
+		if (s[i] == ' ' || s[i] == '\t' || s[i] == '\n' || s[i] == ','
+				|| s[i] == ';' || s[i] == '.' || s[i] == '!'
+				|| s[i] == '?' || s[i] == '"' || s[i] == '('
+				|| s[i] == ')' || s[i] == '{' || s[i] == '}')
+		{
+			start = 1;
+		}
+		else if ((s[i] >= 'A' && s[i] <= 'Z') ||
+				(s[i] >= '0' && s[i] <= '9'))
+		{
+			start = 0;
+		}
+		else if (start == 1 && s[i] >= 'a' && s[i] <= 'z')
+		{
+			s[i] -= ' ';
+			start = 0;
+		}
 	}
 	return (s);
 }
