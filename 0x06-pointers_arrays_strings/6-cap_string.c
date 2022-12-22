@@ -3,14 +3,13 @@
 /**
  * cap_string - capitalizes all words of a string.
  * @s: string
- * Return: s
+ * Return: capitalized string
  */
 char *cap_string(char *s)
 {
 	int len = 13;
 	int a = 0, i;
 	char n[] = {32, 9, '\n', ',', ';', '.', '!', '?', '"', '(', ')', '{', '}'};
-
 
 	while (s[a])
 	{
