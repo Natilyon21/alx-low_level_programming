@@ -23,15 +23,4 @@ char *cap_string(char *s)
 		if (t)
 		{
 			if (s[x] > 96 && s[x] < 123)
-			{
-				s[x] -= 32;
-				t = 0;
-			}
-			else if (s[x] > 64 && s[x] < 91)
-				t = 0;
-			else if (s[x] > 47 && s[x] < 58)
-				t = 0;
-		}
-	}
-	return (s);
-}
+	s}
