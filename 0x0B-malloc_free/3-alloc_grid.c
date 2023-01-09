@@ -4,7 +4,7 @@
  * alloc_grid - create a 2-dimensional array with each element set to 0
  * @width: desired number of columns
  * @height: desired number of rows
- * Return: NULL or a pointer 
+ * Return: NULL or a pointer
  */
 int **alloc_grid(int width, int height)
 {
