@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 /**
-  * _realloc - reallocates a memory block 
+  * _realloc - reallocates a memory block
   * @ptr: input
   * @old_size: input
   * @new_size: input
