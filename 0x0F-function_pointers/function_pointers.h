@@ -3,9 +3,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * _putchar - writes the character c to stdout
+ * _putchar - ...
  * @c: ...
- * Return: 1 on success.
+ * Return: ...
  */
 int _putchar(char c);
 
