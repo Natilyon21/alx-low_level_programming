@@ -2,54 +2,26 @@
 #include "lists.h"
 
 /**
- * delete_nodeint_at_index - delete node at index
+ * reverse_listint - return sum of list data
  * @head: head node
- * @index: index node
- * Return: 1 succed -1 fails
+ * Return: pointer to first node of reversed list
  */
-int delete_nodeint_at_index(listint_t **head, unsigned int index)
+listint_t *reverse_listint(listint_t **head)
 {
-	listint_t *prev, *node;
+	listint_t *prev, *next;
 
-	if (!*head)
-		return (-1);
+	if (!head || !*head)
+		return (*head);
 
-	prev = get_nodeint_at_index(*head, index - 1);
-	node = get_nodeint_at_index(*head, index);
-	if (!node)
-		return (-1);
-	if (index != 0)
+	prev = 0;
+
+	while (*head)
 	{
-		prev->next = node->next;
-		node->next = 0;
+		next = (*head)->next;
+		(*head)->next = prev;
+		prev = *head;
+		*head = next;
 	}
-	else
-	{
-		*head = node->next;
-	}
-	free(node);
-	return (1);
-}
-
-/**
- * get_nodeint_at_index - get node at index
- * @head: head node
- * @index: index node
- * Return: address of index node
- */
-listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
-{
-	unsigned int i = 0;
-
-	if (!head)
-		return (0);
-
-	while (head)
-	{
-		if (index == i)
-			return (head);
-		i++;
-		head = head->next;
-	}
-	return (0);
+	*head = prev;
+	return (*head);
 }
