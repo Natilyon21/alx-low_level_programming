@@ -3,7 +3,7 @@
 #include "main.h"
 
 /**
- * create_file - function that creates a file.
+ * create_file - Creates a file.
  * @filename: variable pointer
  * @text_content: ...
  * Return: 1 for success, -1 for failure
