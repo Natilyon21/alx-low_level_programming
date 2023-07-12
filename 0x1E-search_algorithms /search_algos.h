@@ -11,7 +11,8 @@
  * @index: Index of the node in the list
  * @next: Pointer to the next node
  *
- * Description: ...
+ * Description: singly linked list node structure
+ * for alx project
  */
 typedef struct listint_s
 {
@@ -29,7 +30,7 @@ typedef struct listint_s
  * @express: Pointer to the next node in the express lane
  *
  * Description: singly linked list node structure with an express lane
- * for Holberton project
+ * for alx project
  */
 typedef struct skiplist_s
 {
