@@ -1,7 +1,8 @@
 #include "search_algos.h"
 
 /**
- * interpolation_search - searches for a value in an array 
+ * interpolation_search - searches for a value in an array of
+ * integers using the Interpolation search algorithm
  *
  * @array: input array
  * @size: size of the array
